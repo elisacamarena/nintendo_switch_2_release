@@ -94,19 +94,19 @@ print(percentages)
 # Plot results
 
 plt.figure(figsize=(6, 6))
-colors = ['#4CAF50', '#F44336']  # Green, Red
+colors = ["#913232", "#61AB4D"]  
 percentages.plot.pie(
     autopct='%1.1f%%',
     startangle=90,
     colors=colors,
-    labels=['Positive', 'Negative']
+    labels=['Negative', 'Positive']
 )
 
 plt.title('Sentiment Analysis of Nintendo Switch 2 release video')
 plt.ylabel('')
 plt.tight_layout()
 
-# Save chart 
+# Save chart
 
 fig1_file_path = os.path.join("data", "fig1.png")
 plt.savefig(fig1_file_path)
