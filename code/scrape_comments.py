@@ -20,19 +20,17 @@ key = os.getenv('API_KEY')
 # Build YouTube API client
 youtube = build('youtube', 'v3', developerKey=key)
 
-# --- CONFIGURATION ---
-
-# 🔗 Paste your full YouTube video URL here:
+# Paste YouTube video URL
 video_url = "https://www.youtube.com/watch?v=9flte56erE8"
 
 # Extract video ID from URL 
 video_id = video_url.split("v=")[-1].split("&")[0]
 
-# Set number of comments to analyze
+# Choose number of comments to analyze
 TARGET_COMMENT_COUNT = 1000
 COMMENTS_PER_PAGE = 100  # max allowed by API
 
-# --- FETCH COMMENTS ---
+# Extract comments
 
 comments = []
 next_page_token = None
@@ -59,10 +57,10 @@ while len(comments) < TARGET_COMMENT_COUNT:
     # Check if there's another page
     next_page_token = response.get("nextPageToken")
     if not next_page_token:
-        break  # No more comments
-
-# --- SAVE TO CSV ---
-# Ensure the data folder exists
+        break  
+        
+# Save to .csv file
+# Check if the data folder exists
 os.makedirs("data", exist_ok=True)
 
 csv_file_path = os.path.join("data", "comments.csv")
@@ -72,16 +70,16 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as file:
     writer.writeheader()
     writer.writerows(comments)
 
-## Load your CSV (adjust the path if needed)
+# Load CSV 
 df = pd.read_csv('data/comments.csv')  # or wherever your CSV is
 
-# Function to classify sentiment
+# Classify sentiment
 def classify_sentiment(text):
     blob = TextBlob(str(text))
     polarity = blob.sentiment.polarity
     return 'positive' if polarity > 0 else 'negative'
 
-# Apply sentiment classification
+# Apply sentiment classification to dataset
 df['sentiment'] = df['text'].apply(classify_sentiment)
 
 # Count results
@@ -92,6 +90,8 @@ total = sentiment_counts.sum()
 percentages = (sentiment_counts / total) * 100
 
 print(percentages)
+
+# Plot results
 
 plt.figure(figsize=(6, 6))
 colors = ['#4CAF50', '#F44336']  # Green, Red
@@ -106,6 +106,7 @@ plt.title('Sentiment Analysis of Nintendo Switch 2 release video')
 plt.ylabel('')
 plt.tight_layout()
 
+# Save chart 
 
 fig1_file_path = os.path.join("data", "fig1.png")
 plt.savefig(fig1_file_path)
