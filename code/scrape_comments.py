@@ -105,4 +105,7 @@ percentages.plot.pie(
 plt.title('Sentiment Analysis of Nintendo Switch 2 release video')
 plt.ylabel('')
 plt.tight_layout()
-plt.show()
+
+
+fig1_file_path = os.path.join("data", "fig1.png")
+plt.savefig(fig1_file_path)
