@@ -94,7 +94,7 @@ print(percentages)
 # Plot results
 
 plt.figure(figsize=(6, 6))
-colors = ["#B54646", "#518443"]  
+colors = ['#4CAF50', '#F44336']  # Green, Red
 percentages.plot.pie(
     autopct='%1.1f%%',
     startangle=90,
