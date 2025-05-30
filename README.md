@@ -27,5 +27,4 @@ The code extracts comments from the Nintendo Switch 2 release video to build a d
 3. Make sure you have a YouTube Data API v3 key saved in a private .env file 
 4. Run scrape_comments.py
 \
-\
-Done! You should now have a pie chart showing the distribution of positive and negative comments.
+\Done! You should now have a pie chart showing the distribution of positive and negative comments.
