@@ -1,4 +1,4 @@
-#Final project - Applied Econometrics II
+# Final project - Applied Econometrics II
 ## Nintendo Switch 2 release
 \
 \
