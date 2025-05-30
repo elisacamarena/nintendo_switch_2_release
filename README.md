@@ -23,7 +23,7 @@ The code extracts comments from the Nintendo Switch 2 [overview trailer](https:/
 
 ## How can you replicate this project?
 1. Clone the repository
-2. Set up a virtual environment
+2. Set up a virtual environment using requirements.txt
 3. Make sure you have a YouTube Data API v3 key saved in a private .env file 
 4. Run scrape_comments.py
 
