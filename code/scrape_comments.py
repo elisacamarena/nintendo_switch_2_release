@@ -28,7 +28,7 @@ video_id = video_url.split("v=")[-1].split("&")[0]
 
 # Choose number of comments to analyze
 TARGET_COMMENT_COUNT = 1000
-COMMENTS_PER_PAGE = 100  # max allowed by API
+COMMENTS_PER_PAGE = 100  # maximum allowed by YT API
 
 # Extract comments
 
