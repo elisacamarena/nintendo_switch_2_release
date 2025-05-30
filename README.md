@@ -6,7 +6,7 @@ The main purpose of the project is to build a well-documented data scraping pipe
 \
 \
 The code extracts comments from the Nintendo Switch 2 release video to build a database and then classifies them into "positive" and "negative" usign TextBlob, a natural language processing (NLP) library. Finally, it graphs the results and shows the sentiment distribution.
-\
+
 
 ## What does this repo contain?
  ```
