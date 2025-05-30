@@ -10,12 +10,12 @@ The code extracts comments from the Nintendo Switch 2 release video to build a d
 ## What does this repo contain?
  ```
   nintendo_switch_2_release/
-  ├── README.md
-  ├── .gitignore
-  ├── requirements.txt 
   ├── code/
   │   └── scrape_comments.py    
   └── data/
       └── comments.csv
-      └── fig1.png           
+      └── fig1.png
+  ├── .gitignore
+  ├── README.md
+  ├── requirements.txt         
   ```
