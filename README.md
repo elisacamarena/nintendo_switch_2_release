@@ -20,3 +20,10 @@ The code extracts comments from the Nintendo Switch 2 release video to build a d
   ├── README.md
   ├── requirements.txt         
   ```
+\
+## How to replicate:
+1. Clone the repository
+2. Set up virtual environment
+3. Make sure you have a YouTube Data API v3 key saved in a private .env file 
+4. Run scrape_comments.py
+Done! You should now have a pie chart showing the distribution of positive and negative comments.
