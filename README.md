@@ -20,7 +20,7 @@ The code extracts comments from the Nintendo Switch 2 release video to build a d
   ├── README.md
   ├── requirements.txt         
   ```
-\
+
 ## How to replicate:
 1. Clone the repository
 2. Set up virtual environment
